@@ -2,6 +2,8 @@
 
 **Status:** Planning draft incorporating the newly discussed private equipment scope. Estimates are proposals, not completion status. See the [product specification](../product-specification.md) and [implementation roadmap](../implementation-roadmap.md) for related requirements and order.
 
+The newer [equipment decisions](equipment-decisions.md) refine and supersede conflicting details in this draft, including warm-up history and future equipment sharing with a coach; unresolved interactions still require design.
+
 ## Goal and boundaries
 
 Deliver an Android Flutter training app that works offline, without an account or backend, and retains data locally. One device has one local trainee profile. The MVP supports Polish and English, training plans and sessions, private training places and equipment, equipment-aware weight suggestions, progress tracking, and data export and recovery. Selecting a place is optional. Accounts, synchronization, coaching, public gym profiles and their verification, geolocation, partner matching, and offers are later phases; Phase I prepares data for synchronization but does not implement it.
