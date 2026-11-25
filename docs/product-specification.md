@@ -22,7 +22,7 @@ The short onboarding screen can be skipped. Sections 3–11 define the local MVP
 
 Phase I also includes optional private training places and equipment-aware weight suggestions, as detailed in the [Phase I plan](phase-one/plan.md). Public gym profiles and their management are later work. Equipment-specific design details remain open in that plan.
 
-The newer [equipment decisions](phase-one/equipment-decisions.md) refine the Phase I requirements and supersede conflicting details below concerning warm-up history and future equipment sharing with a coach.
+The newer [equipment decisions](phase-one/equipment-decisions.md) refine the Phase I requirements and supersede conflicting details below concerning exercise configuration sharing, warm-up history, and future equipment sharing with a coach.
 
 ## 3. Onboarding and defaults
 

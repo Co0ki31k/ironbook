@@ -2,7 +2,7 @@
 
 **Status:** Planning draft incorporating the newly discussed private equipment scope. Estimates are proposals, not completion status. See the [product specification](../product-specification.md) and [implementation roadmap](../implementation-roadmap.md) for related requirements and order.
 
-The newer [equipment decisions](equipment-decisions.md) refine and supersede conflicting details in this draft, including warm-up history and future equipment sharing with a coach; unresolved interactions still require design.
+The newer [equipment decisions](equipment-decisions.md) refine and supersede conflicting details in this draft, including exercise configuration sharing, warm-up history and future equipment sharing with a coach; unresolved interactions still require design.
 
 ## Goal and boundaries
 

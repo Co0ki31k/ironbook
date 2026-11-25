@@ -14,7 +14,8 @@
 ## Exercises and plans
 
 - Machines are distinct equipment items. An exercise may reference a specific machine and its settings, but this is optional. Multiple exercises can refer to the same machine; independent exercises can have the same name while referring to different machines. Exercise-specific and equipment-specific settings must be distinguished during design.
-- Support different equipment configurations for the same exercise across separate place-specific plans in Phase I. The exact relationship between these configurations and independent exercise histories needs clarification.
+- A local exercise collection supplies exercises to workout units. Reusing the same exercise in multiple units shares its settings, history and progression; an independent exercise can have the same name and machine but different settings and its own history. Creating a copy copies settings and notes but starts an independent empty history. Exercises on different machines are independent; changing the machine creates an independent version. Separate place-specific units can use appropriately configured independent exercises.
+- Machine properties such as name, photo, description and available weights belong to the machine; exercise name, persistent technical note and personal machine settings belong to the exercise; performed weights, equipment and session notes belong to the workout. The previous assumption that set ranges and progression settings are always independent per plan occurrence is superseded by the shared exercise settings decision; the detailed split of other plan-specific settings remains to be designed.
 - No special occupied-machine or wrong-gym workflow is required by the current decision. Users may save workout changes to a personal plan when they choose; the exact interaction with equipment substitution needs clarification.
 - A user has a default weight-entry convention and can choose a convention for an exercise. Total, both sides of plates, and one side are supported for barbells. Showing a calculated equivalent is desirable where reliable, but its placement is not a priority. Manual entries remain allowed even when inventory does not confirm the load.
 
@@ -23,12 +24,13 @@
 - Users can manually add and configure warm-up sets per exercise. The app can suggest settings based on the number of sets, while users retain control. Warm-up sets are displayed as tasks and are not saved to workout history. Completed sets can be unchecked; whether they remain visible or disappear depends on the selected workout view (list or interactive). If the first working set is recorded while configured warm-up sets remain unchecked, those warm-ups are automatically marked complete, with visibility determined by the view. They remain separate from working-set progression and statistics. Defaults and persistence during an interrupted session need design.
 - Warm-up targets use the planned first working-set weight. A later change does not retroactively affect completed warm-ups; the user's described behavior is that it affects the next workout. Exact behavior for unfinished warm-ups and first-time planning must be clarified.
 - When equipment data is available, use the next available weight for progression; do not introduce a separate large-jump threshold. If data is incomplete, provide a visual progression indication and encourage users choosing progression to enter equipment information. Exact manual fallback and relation to the configured increment remain open.
-- If no higher weight exists, allow switching to manual entries. A future profile badge or other gamification is an idea for a later phase, not an MVP requirement. Progression remains independent per working set. Set matching when the number or order changes is open.
+- If no higher weight exists, allow switching to manual entries. A future profile badge or other gamification is an idea for a later phase, not an MVP requirement. Progression remains independent per working set: match the first set to the previous first, the second to the previous second, and so on. A new set with no previous counterpart has no imposed suggestion; a user may enter or copy a value. Removed sets remain in history.
 - Treat same-named exercises configured for different machines as independently created exercises where the user chooses that arrangement; do not assume machine loads are equivalent.
 
 ## History and future coaching
 
 - Show the selected place and equipment in history when available. Keep the historical place and equipment names when those items are renamed or deleted. The separate rule for shared exercise renaming remains in the product specification.
+- Removing an exercise from a unit removes its association only. Removing an exercise from the collection must preserve readable workout history; warn the user if the exercise is used in history. Renaming a shared exercise updates its displayed name in history, without changing recorded values or equipment.
 - In the future coaching phase, agreeing to connect with a coach shares the trainee's equipment inventory. This decision concerns equipment; existing restrictions on workout history, body weight and personal plans continue to apply. Exact scope, withdrawal and relationship termination behavior require design.
 
 ## Questions to resolve
@@ -36,8 +38,8 @@
 1. When a plan has no associated place, how is the optional place chosen before a session?
 2. Are photos and descriptions optional, and how are photos stored, backed up and limited?
 3. For adjustable dumbbells, are plates a separate compatible inventory or shared with other equipment, and must the two dumbbells load symmetrically?
-4. How do configurations in separate place-specific plans relate to independent same-named exercises and progression history?
+4. Which settings, if any, remain specific to a plan occurrence alongside the shared exercise settings?
 5. For incomplete equipment data, what is the exact visual/manual progression fallback, and how does the configured progression increment relate to the next available weight?
 6. Do unfinished warm-up suggestions remain unchanged when the working weight changes during a workout? How are warm-up completion and undo retained while an interrupted session is resumed, without saving them to completed history?
-7. Which warm-up settings should be suggested for each number of sets, and how are sets matched between sessions when their count or order changes?
+7. Which warm-up settings should be suggested for each number of sets?
 8. What exactly is shared with a coach when a relationship is accepted, and can equipment sharing be separately withdrawn?
