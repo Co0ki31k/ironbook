@@ -20,6 +20,8 @@ The first release is a Flutter application for Android that works without an acc
 
 The short onboarding screen can be skipped. Sections 3–11 define the local MVP. Accounts, synchronization, the coaching dashboard, location features, and offers are subsequent phases. A separate mobile app for coaches and a marketplace are outside the current implementation plan.
 
+Phase I also includes optional private training places and equipment-aware weight suggestions, as detailed in the [Phase I plan](phase-one-plan.md). Public gym profiles and their management are later work. Equipment-specific design details remain open in that plan.
+
 ## 3. Onboarding and defaults
 
 Onboarding allows users to choose language, weight unit, theme, default rest time, and whether to add a starter plan. If skipped, defaults are the device language when supported or Polish otherwise, kilograms, the system theme, a 90-second rest period, and an added and active starter plan.
@@ -57,6 +59,8 @@ An exercise can specify a fixed planned number of working sets; a default repeti
 For each working set, users record weight and repetitions and optionally RIR, stored separately per set. RIR can be enabled per exercise; a global setting can hide it everywhere. It is informational and does not affect progression.
 
 Warm-up sets are separate and excluded from progression and calculations based on working sets. The app may suggest their weights and repetitions from exercise settings and the first working-set weight; users can change each suggestion.
+
+Warm-up targets are percentages of the planned first working-set weight. Where sufficient equipment data exists, the default suggestion is the closest feasible weight at or below the target; users may choose another. Missing data and cases with no feasible lower weight must be made clear. Equipment-aware progression and plate arrangements are described in the Phase I plan.
 
 Two globally selected views are available: **List view**, showing exercises and sets in a list, and **Focused view**, showing one exercise at a time and moving to the next after its sets are complete. Users can return to earlier exercises and correct entries.
 
