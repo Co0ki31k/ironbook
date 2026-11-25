@@ -20,7 +20,7 @@ The first release is a Flutter application for Android that works without an acc
 
 The short onboarding screen can be skipped. Sections 3–11 define the local MVP. Accounts, synchronization, the coaching dashboard, location features, and offers are subsequent phases. A separate mobile app for coaches and a marketplace are outside the current implementation plan.
 
-Phase I also includes optional private training places and equipment-aware weight suggestions, as detailed in the [Phase I plan](phase-one-plan.md). Public gym profiles and their management are later work. Equipment-specific design details remain open in that plan.
+Phase I also includes optional private training places and equipment-aware weight suggestions, as detailed in the [Phase I plan](phase-one/plan.md). Public gym profiles and their management are later work. Equipment-specific design details remain open in that plan.
 
 ## 3. Onboarding and defaults
 

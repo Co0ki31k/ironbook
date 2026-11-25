@@ -31,4 +31,4 @@ Work proceeds through four phases. Each design stage ends with agreed, verifiabl
 
 A separate coach mobile app and marketplace are future ideas, not requirements for completion of this plan.
 
-See the [Phase I plan](phase-one-plan.md) for detailed scope, open decisions, acceptance criteria, and indicative estimates. Public gym profiles and their administration are later work.
+See the [Phase I plan](phase-one/plan.md) for detailed scope, open decisions, acceptance criteria, and indicative estimates. Public gym profiles and their administration are later work.

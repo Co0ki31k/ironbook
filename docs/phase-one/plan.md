@@ -1,6 +1,6 @@
 # Phase I — Local Training App: Requirements and Schedule
 
-**Status:** Planning draft incorporating the newly discussed private equipment scope. Estimates are proposals, not completion status. See the [product specification](product-specification.md) and [implementation roadmap](implementation-roadmap.md) for related requirements and order.
+**Status:** Planning draft incorporating the newly discussed private equipment scope. Estimates are proposals, not completion status. See the [product specification](../product-specification.md) and [implementation roadmap](../implementation-roadmap.md) for related requirements and order.
 
 ## Goal and boundaries
 
