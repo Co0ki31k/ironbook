@@ -9,7 +9,7 @@ Work proceeds through four phases. Each design stage ends with agreed, verifiabl
 1. **Foundations:** agree the MVP scope, use cases, screen flows, equipment and domain models, weight calculation rules, SQLite approach, and future synchronization assumptions. Outcome: a coherent foundation for implementation.
 2. **Mobile foundation:** organize Flutter and local storage; build navigation, Polish/English localization, settings, and skippable onboarding. Outcome: an Android app with persistent settings and main navigation.
 3. **Equipment, exercises and plans:** build private places and equipment, the offline library, custom exercises, programs, plans, configuration, and editable starter-plan copy. Outcome: users can prepare a local plan with optional equipment selection.
-4. **Workout and history:** implement planned and quick sessions, sets, RIR, notes, timer, workout views, autosave and resumption, history, editing, and deletion. Outcome: a complete offline plan-to-workout-to-history flow.
+4. **Workout and history:** implement plan-based sessions, sets, RIR, notes, timer, workout views, autosave and resumption, history, editing, and deletion. Outcome: a complete offline plan-to-workout-to-history flow.
 5. **Calculations, progression and statistics:** implement equipment-aware weight and plate suggestions, progression, body-weight measurements, exercise charts and records; decide and document formulas. Outcome: users can analyze history and receive suggestions using explicit rules.
 6. **Backups and MVP completion:** add versioned JSON export/import, CSV export, confirmation and automatic backup before replacement; verify core flows and data persistence. Outcome: a standalone offline app with data recovery.
 

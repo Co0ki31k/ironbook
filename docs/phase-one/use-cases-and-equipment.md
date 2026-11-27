@@ -13,17 +13,17 @@ The trainee can plan and record workouts offline, with no account, place, or equ
 **Starting point:** A user launches the app for the first time, with no network connection.
 
 1. The user completes or skips onboarding; selected settings or specified defaults are saved.
-2. The user chooses a plan or starts a quick workout without selecting a place.
+2. The user chooses or creates a plan and starts a workout without selecting a place.
 3. The user enters exercises and weights manually, completes the session, and sees it in history.
 
-**Result:** No gym or equipment data is required; the session persists after restart. If the starter plan was skipped or removed, the app offers plan creation and a quick workout.
+**Result:** No gym or equipment data is required; the session persists after restart. If the starter plan was skipped or removed, the app offers plan creation.
 
 ### UC2 — Create a private training place
 
 **Starting point:** A user wants equipment-aware suggestions for a home setup or gym.
 
 1. The user creates a private place and names it.
-2. The user adds the available equipment and the information they know, such as a bar's weight, plate denominations and quantities, or stack labels.
+2. The user adds the available equipment and the information they know, such as a bar's weight, plate denominations, or stack labels. Plate quantities are not recorded; calculations assume sufficient plates of each listed denomination.
 3. The place and equipment persist locally; the user can return to edit them.
 
 **Alternative:** The user does not know a value. The place can still be used, but any calculation requiring that value must not claim a verified result. Exact mandatory fields and validation remain open.
@@ -43,7 +43,7 @@ The trainee can plan and record workouts offline, with no account, place, or equ
 3. The app calculates targets of 50, 75, and 90 kg. For each, if the required data is available, it finds a feasible total at or below the target and shows the suggested weight and plate arrangement per side.
 4. The user may choose a different available weight or enter a value. Working sets are recorded and the session is saved automatically. Warm-up tasks can be checked and unchecked and are not saved to completed workout history; their visibility depends on the workout view. Recording the first working set automatically checks remaining warm-up tasks.
 
-**Alternatives:** If the empty bar is already heavier than the target, show the situation and let the user decide. If plate quantities or bar mass are unknown, show the target without claiming a feasible arrangement. Changing the working weight must not alter completed warm-up sets; recalculation of uncompleted or manually changed suggestions needs an agreed interaction.
+**Alternatives:** If the empty bar is already heavier than the target, show the situation and let the user decide. If plate denominations or bar mass are unknown, show the target without claiming a feasible arrangement. Suggestions assume sufficient plates; actual availability can vary. Changing the working weight does not automatically recalculate the current warm-up suggestions; the user can edit remaining sets manually.
 
 ### UC5 — Train using a stack or plate-loaded machine
 
@@ -77,9 +77,9 @@ This is a domain sketch, not a table design. Fields described as **candidate** n
 |---|---|---|
 | Private training place | Locally owned named place containing equipment. Multiple places are supported; selecting one is optional. | Selection for a session without a planned place and future connection to a public gym; copying is deferred. |
 | Equipment item | Identifiable item belonging to a place; type, name and optional description. Distinct machines can have distinct settings. | Quantity versus separate item identity, availability, deletion, and whether an item can be shared between places. |
-| Barbell | Bar mass is needed for total-weight calculations. | Other properties such as capacity and compatibility; whether unknown mass is allowed. |
-| Plate inventory | Plate mass and available number of individual plates in a shared inventory. Symmetric bar arrangements prefer fewer plates; collar mass is excluded. | Compatibility and handling adjustable dumbbell plates. |
-| Fixed dumbbells / kettlebells | Available individual weights and quantities. | Whether an exercise uses one or a pair and whether entered weight means per item or combined. |
+| Barbell | Bar mass is needed for total-weight calculations; unknown mass does not prevent manual entry. | Other properties such as capacity and compatibility. |
+| Plate inventory | Available plate denominations in a shared inventory, without quantities. Symmetric bar arrangements assume sufficient plates and prefer fewer plates; collar mass is excluded. | Compatibility and handling adjustable dumbbell plates. |
+| Fixed dumbbells / kettlebells | Available individual weights and quantities. Dumbbell entry can represent one or a combined load. | How the chosen equipment and entry convention are represented for each exercise. |
 | Adjustable dumbbells / kettlebells | A way to describe the actual selectable weights or a compatible loading configuration. | Which configurations are required in Phase I and how quantities and increments are expressed. |
 | Stack machine | A specific machine and its selectable labeled settings, entered using a range and increment and then editable. | Units, starting resistance and independent stacks. |
 | Plate-loaded machine | A specific machine with plate-loading information where known. | Symmetric versus independent sides, starting load, compatible plates, and whether a total can be meaningfully calculated. |
@@ -92,7 +92,7 @@ The following barbell modes are agreed as user preferences: total including the 
 
 For a 100 kg first working set and a 75% warm-up target, the target is 75 kg. If the feasible totals immediately surrounding it are 72.5 and 77.5 kg, suggest 72.5 kg by default and offer user choice. Actual feasible totals depend on the bar and individual plate inventory; the values here illustrate rounding rather than a specific inventory.
 
-**Open:** Detailed weight meaning for each equipment type; rounding precision and unit conversion; plate compatibility; progression increment versus the next feasible weight; and missing inventory data. Keep a distinction between a target, a feasible suggestion, and what the user actually records.
+**Open:** Detailed weight meaning for each equipment type; rounding precision and unit conversion; plate compatibility and missing inventory interactions. The progression method selects either equipment settings or a custom increment. Keep a distinction between a target, a feasible suggestion, and what the user actually records.
 
 ## Remaining decisions
 
